@@ -18,8 +18,8 @@ def dfIndex(df):
 def dfSort(df,colName,ascendingToF):
     return df.sort_values(colName, ascending=ascendingToF)
 
-def filterDf(df,filterData,colName):
-    return df[df[colName].isin(filterData)]
+def filterDf(df,filterData,filterCol,colName):
+    return df[df[colName].isin(filterData[filterCol)]
                              
 def dropDups(df,subsetCols):
     return df.drop_duplicates(subset=subsetCols)
